@@ -3,7 +3,7 @@ import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { InjectModel } from '@nestjs/mongoose';
 import { User } from './schemas/user.schema';
-import { JwtService } from '@nestjs/jwt';
+// import { JwtService } from '@nestjs/jwt';
 import { Model } from 'mongoose';
 import { CloudinaryService } from '../cloudinary/cloudinary.service';
 
@@ -15,7 +15,7 @@ export class UserService {
     // private jwtService: JwtService,
         private readonly cloudinaryService: CloudinaryService,
   ) { }
-  async createUser(createUserDto: CreateUserDto, profilePicture?: Express.Multer.File) {
+  async create(createUserDto: CreateUserDto, profilePicture?: Express.Multer.File) {
     const newUser = new this.userModel(createUserDto);
 
     if (profilePicture) {
