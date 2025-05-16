@@ -22,4 +22,7 @@ export class CloudinaryService {
       });
     });
   }
+//     async uploadFile(file: Express.Multer.File): Promise<any> {
+//     return await uploadStreamAsync(file.buffer);
+//   }
 }
