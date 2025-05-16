@@ -6,10 +6,11 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { CloudinaryModule } from 'src/cloudinary/cloudinary.module';
 
 @Module({
-    imports: [MongooseModule.forFeature([{ name: User.name, schema: UserSchema }],),
-      CloudinaryModule,
+  imports: [
+    MongooseModule.forFeature([{ name: User.name, schema: UserSchema }],),
+    CloudinaryModule,
   ],
   controllers: [UserController],
   providers: [UserService],
 })
-export class UserModule {}
+export class UserModule { }
